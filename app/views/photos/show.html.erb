@@ -1,0 +1,8 @@
+<h1>Display Model Records</h1>
+
+<img src="<%= @var.photo %>">
+<p>Caption <%= @var.caption %> </p>
+<p>Created at <%= @var.created_at %></p>
+<p>Updated at <%= @var.updated_at %></p>
+<%= link_to "Edit", edit_photo_path(@var.id) %>
+<%= link_to "Delete", photo_path(@var.id), {:method => :delete, :data => {:comfirm => "Are you sure?"}}%>
